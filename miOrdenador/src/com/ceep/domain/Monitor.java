@@ -2,7 +2,7 @@ package com.ceep.domain;
 
 public class Monitor {
 
-    private int idMonitor;
+    private final int idMonitor;
     private String marca;
     private double tamanio;
     private static int contadorMonitor;
@@ -13,20 +13,13 @@ public class Monitor {
     }
 
     public Monitor(String marca, double tamanio) {
+        this(); //Llama al constructor vacio
         this.marca = marca;
         this.tamanio = tamanio;
 
     }
 
     //Getter and Setters
-    public int getIdMonitor() {
-        return idMonitor;
-    }
-
-    public void setIdMonitor(int idMonitor) {
-        this.idMonitor = idMonitor;
-    }
-
     public String getMarca() {
         return marca;
     }

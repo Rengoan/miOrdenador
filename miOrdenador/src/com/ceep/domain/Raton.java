@@ -7,14 +7,15 @@ public class Raton extends DispositivoEntrada {
 
     //Constructores
     public Raton(String tipoEntrada, String marca) {
-        super(tipoEntrada,marca);
+        super(tipoEntrada, marca); //Hace referencia al constructor de la clase padre
         this.idRaton = ++Raton.contadorRatones;
     }
 
     //toString
     @Override
     public String toString() {
-        return "Raton{" + "idRaton=" + idRaton + '}';
+        return "Raton{" + "idRaton=" + idRaton + '}' +super.toString();
+        //Para combinar el toString con el de la clase padre
     }
 
 }

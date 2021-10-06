@@ -2,18 +2,20 @@ package com.ceep.domain;
 
 public class Computadora {
 
-    private int idComputadora;
+    private final int idComputadora;
     private String nombre;
     Monitor monitor;
     Teclado teclado;
     Raton raton;
+    private static int contadorComputadoras;
 
     //Contructor
     public Computadora() {
+        this.idComputadora = ++Computadora.contadorComputadoras;
     }
 
     public Computadora(String nombre, Monitor monitor, Teclado teclado, Raton raton) {
-
+        this();
         this.nombre = nombre;
         this.monitor = monitor;
         this.teclado = teclado;
@@ -21,14 +23,6 @@ public class Computadora {
     }
 
     //Getter and Setters
-    public int getIdComputadora() {
-        return idComputadora;
-    }
-
-    public void setIdComputadora(int idComputadora) {
-        this.idComputadora = idComputadora;
-    }
-
     public String getNombre() {
         return nombre;
     }
@@ -59,6 +53,14 @@ public class Computadora {
 
     public void setRaton(Raton raton) {
         this.raton = raton;
+    }
+
+    public static int getContadorComputadoras() {
+        return contadorComputadoras;
+    }
+
+    public static void setContadorComputadoras(int contadorComputadoras) {
+        Computadora.contadorComputadoras = contadorComputadoras;
     }
 
     //toString
