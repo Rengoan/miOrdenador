@@ -7,6 +7,7 @@ public class DispositivoEntrada {
 
     //Contructores
     public DispositivoEntrada(String tipoEntrada, String marca) {
+        super();
         this.tipoEntrada = tipoEntrada;
         this.marca = marca;
     }

@@ -1,12 +1,13 @@
 package com.ceep.domain;
 
-public class Teclado {
+public class Teclado extends DispositivoEntrada {
 
     private final int idTeclado;
     private static int contadorTeclados;
 
     //Constructor
-    public Teclado() {
+    public Teclado(String tipoEntrada, String marca) {
+        super(tipoEntrada,marca);
         this.idTeclado = ++Teclado.contadorTeclados;
     }
 
